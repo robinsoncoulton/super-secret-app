@@ -1,0 +1,59 @@
+.container {
+
+}
+
+.form {
+	width: 50%;
+	margin: auto;
+}
+
+input {
+	margin: 10px 5%;
+	padding: 10px 0;
+	width: 90%;
+	height: 30px;
+	border-radius: 5px;
+	border: none;
+	text-align: center;
+}
+
+.submit-button {
+	height: 50px;
+	background-color: #34344A;
+	color: white;
+	width:50%;
+	font-family: 'Grand hotel', cursive;
+	font-size: 24px;
+}
+
+.form-group {
+	display: flex;
+	margin: 10px 5%;
+}
+
+.form-group > div {
+	flex-grow: 1;
+	height: 30px;
+	padding: 10px 0;
+	background-color: #fff;
+	color: #aaa;
+	font-size: 24px;
+	margin: 0;
+}
+
+.form-group > div:hover {
+	background-color: #34344A;
+	border: none;
+	color: #B7FFEE;
+}
+
+.first-button {
+    border-radius: 5px 0 0 5px;
+    border-right: 1px solid #FF655B;
+
+}
+
+.second-button {
+	border-radius: 0 5px 5px 0;
+	border-left: 1px solid #FF655B;
+}

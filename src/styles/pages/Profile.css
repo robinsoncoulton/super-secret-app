@@ -1,0 +1,41 @@
+.profile {
+	height: 100%;
+	width: 100%;
+}
+
+.display-pic {
+	width: 250px;
+}
+
+.profile-edit-section {
+	display: flex;
+	width: 66%;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 24px;
+	background-color: #FF655B;
+	padding: 0;	
+}
+
+.profile-edit-label {
+	width: 250px;
+}
+
+.profile-edit-input {
+	text-align: left;
+	font-size: 24px;
+	background-color: #FF655B;
+	color: #fff;
+	flex-shrink: 1;
+	padding: 0;
+	margin: 0;
+}
+
+.profile-edit-input:focus {
+	background-color: #fff;
+	color: #333;
+}		
+
+.btn {
+	cursor: pointer;
+}
