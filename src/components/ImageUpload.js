@@ -1,6 +1,7 @@
 import React from 'react';
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const CLOUDINARY_UPLOAD_PRESET = 'ImageUploaderComponent';
 const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/zelkia/image/upload';
@@ -30,30 +31,39 @@ class ImageUpload extends React.Component {
 	        	console.error(err);
 	      	}
 
-	      	if (response.body.secure_url !== '') {
-	        	this.setState({
-	          		uploadedFileCloudinaryUrl: response.body.secure_url
-        		});
+	      	if (response) {
+	      		if (response.body.secure_url !== '') {
+		        	this.setState({
+		          		uploadedFileCloudinaryUrl: response.body.secure_url
+	        		});
+	        	}
 	      	}
     	});
   	}
 
 	render() {
 		return (
-			<div>
+			<div className='display-pic-container'>
 			    <Dropzone
 			        multiple={false}
 			        accept="image/*"
 			        onDrop={this.onImageDrop}>
-			        <p>Drop an image or click to select a file to upload.</p>
+			        <div className='dropzone-inner-container'>
+			        	<FontAwesomeIcon className='upload-icon' icon='upload' />
+			        </div>
 			    </Dropzone>
-
+				
 			    <div>
 			        {this.state.uploadedFileCloudinaryUrl === '' ? null :
 		        	<div>
-			          	<p>{this.state.uploadedFile.name}</p>
-			          	<img src={this.state.uploadedFileCloudinaryUrl} />
-			        </div>}
+			          	<img className='display-pic' src={this.state.uploadedFileCloudinaryUrl} />
+				        <div 
+							className='display-pic-edit btn' 
+							onClick={this.handleClick}>
+							<FontAwesomeIcon icon='pen-square' />
+						</div>
+			        </div>
+			    }
 			    </div>
 		    </div>
 		)

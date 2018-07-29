@@ -5,9 +5,9 @@ import './App.css';
 import Routes from './Routes';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHeart, faPenSquare, faMars, faVenus } from '@fortawesome/free-solid-svg-icons'
+import { faHeart, faPenSquare, faMars, faVenus, faUpload } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faHeart, faPenSquare, faMars, faVenus);
+library.add(faHeart, faPenSquare, faMars, faVenus, faUpload);
 
 const cors = require('cors');
 

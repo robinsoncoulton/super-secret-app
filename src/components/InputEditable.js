@@ -27,7 +27,10 @@ class InputEditable extends React.Component {
 	}
 
 	handleKeypress(e) {
-		e.target.blur();
+		console.log(e.key);
+		if (e.key === 'Enter') {
+			e.target.blur();
+		}
 	}
 
 	componentDidUpdate() {
